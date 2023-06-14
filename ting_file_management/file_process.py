@@ -1,6 +1,7 @@
 from ting_file_management.file_management import txt_importer
 import sys
 
+
 def process(path_file, instance):
     for i in range(len(instance)):
         eachFile = instance.search(i)
@@ -21,7 +22,7 @@ def remove(instance):
         print("Não há elementos")
         return
     path = instance.dequeue()
-    print (f"Arquivo {path['nome_do_arquivo']} removido com sucesso")
+    print(f"Arquivo {path['nome_do_arquivo']} removido com sucesso")
 
 
 def file_metadata(instance, position):
@@ -30,4 +31,3 @@ def file_metadata(instance, position):
         print(archive)
         return
     sys.stderr.write("Posição inválida")
-
