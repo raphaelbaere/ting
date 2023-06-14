@@ -1,5 +1,5 @@
 def exists_word(word, instance):
-    r = []
+    r = list()
     c = 0
 
     for i in range(len(instance)):
@@ -20,7 +20,7 @@ def exists_word(word, instance):
             c += 1
 
     if c == len(instance):
-        return []
+        return list()
 
     return r
 
