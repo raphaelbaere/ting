@@ -21,13 +21,13 @@ def remove(instance):
     if len(instance) == 0:
         print("Não há elementos")
         return
-    path = instance.dequeue()
-    print(f"Arquivo {path['nome_do_arquivo']} removido com sucesso")
+    archive = instance.dequeue()
+    print(f"Arquivo {archive['nome_do_arquivo']} removido com sucesso")
 
 
 def file_metadata(instance, position):
     if 0 <= position < len(instance):
         archive = instance.search(position)
         print(archive)
-        return
+        return archive
     sys.stderr.write("Posição inválida")
